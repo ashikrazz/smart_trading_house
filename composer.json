@@ -1,0 +1,11 @@
+{
+    "name": "ashik/smart_trading_house",
+    "authors": [
+        {
+            "name": "ashik"
+        }
+    ],
+    "require": {
+        "mpdf/mpdf": "^8.2"
+    }
+}
