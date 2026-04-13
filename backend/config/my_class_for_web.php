@@ -5,8 +5,8 @@ class my_class{
 //================ Start DB Connection 1 ====================
     private $host_add1="localhost";
     private $db_name1="mltaltd1_smt";
-    private $user_name1="root";
-    private $password1="";
+    private $user_name1="mltaltd1_smt";
+    private $password1="mz,#t1B*x;IV";
 
 
 // ==========================
