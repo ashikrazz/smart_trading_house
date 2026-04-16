@@ -3,10 +3,10 @@ date_default_timezone_set("Asia/Dacca");
 
 class my_class{
 //================ Start DB Connection 1 ====================
-    private $host_add1="localhost";
+    private $host_add1="gateway01.ap-southeast-1.prod.aws.tidbcloud.com";
     private $db_name1="mltaltd1_smt";
-    private $user_name1="mltaltd1_smt";
-    private $password1="mz,#t1B*x;IV";
+    private $user_name1="2EfT2LaHKjRSYpX.root";
+    private $password1="AkHTEe4erTfdH2MT";
 
 
 // ==========================
