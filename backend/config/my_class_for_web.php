@@ -10,10 +10,30 @@ class my_class{
 
 
 // ==========================
-    public function __construct(){
-        $this->con1 = new PDO("mysql:host=".$this->host_add1.";dbname=".$this->db_name1,$this->user_name1,$this->password1);
+   // public function __construct(){
+       // $this->con1 = new PDO("mysql:host=".$this->host_add1.";dbname=".$this->db_name1,$this->user_name1,$this->password1);
         //echo "ssdsf";
-        $this->con1->exec('SET NAMES utf8');
+        //$this->con1->exec('SET NAMES utf8');
+   // }
+    
+    public function __construct(){
+        try {
+            
+            $this->con1 = new PDO(
+                "mysql:host=".$this->host_add1.";port=4000;dbname=".$this->db_name1.";charset=utf8mb4",
+                $this->user_name1,
+                $this->password1,
+                [
+                    PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
+                    PDO::MYSQL_ATTR_SSL_CA => "/etc/ssl/certs/ca-certificates.crt"
+                ]
+            );
+            
+            $this->con1->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            
+        } catch (PDOException $e) {
+            die("DB Connection Failed: " . $e->getMessage());
+        }
     }
 //================== End DB Connection 1 ======================
 // ======================
